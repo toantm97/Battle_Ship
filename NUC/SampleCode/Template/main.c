@@ -198,30 +198,34 @@ void longdelay(int i){
 
 void sendkey(key){
 		if (key != 99){
-			if (key ==6) {
+			if (key ==1) {
 							printf("AT+CIPSTART=\"TCP\",\"203.128.241.216\",3000\r\n");
 							longdelay(10);
 							//printf("AT+CIPSEND=79\r\n");
-							printf("AT+CIPSEND=38\r\n");
+							printf("AT+CIPSEND=39\r\n");
 							longdelay(4);
-							printf("POST /name?state=Device02 HTTP/1.1\r\n\r\n");
+							printf("POST /name2?state=Device02 HTTP/1.1\r\n\r\n");
 							longdelay(4);
 							initKeypad();
-			} else if (key == 7) {
+			} else if (key == 2) {
 						printf("AT+CIPSTART=\"TCP\",\"203.128.241.216\",3000\r\n");
 						longdelay(15);
 						initKeypad();
 			}
 			else
 			{
-			printf("AT+CIPSEND=30\r\n");
-			//longdelay(1);
-			CLK_SysTickDelay(200000);
-			printf("POST /key?state=%d HTTP/1.1\r\n\r\n",key);
-			initKeypad();
+			if (key <10){
+				printf("AT+CIPSEND=31\r\n");
+				
+			} 
+			else printf("AT+CIPSEND=32\r\n");
+				//longdelay(1);
+				CLK_SysTickDelay(200000);
+				printf("POST /key2?state=%d HTTP/1.1\r\n\r\n",key);
+				initKeypad();
 			}
 		}	
-	
+}
 }
 
 int main(void)
