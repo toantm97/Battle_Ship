@@ -56,19 +56,19 @@ SttA = SttB  = 0;
 		socket.on("Sent-key-from-AAA", function(data){
 		var key = parseInt(data);
 			switch(key){
-				case 1:    //left
+				case 9:    //left
 				xc = -1; yc =0;
 				break;
-				case 2:    //up
+				case 6:    //up
 				xc = 0; yc =1;
 				break;
-				case 3:    //right
+				case 11:    //right
 				xc = 1; yc =0;
 				break;
-				case 4:    //down
+				case 14:    //down
 				xc = 0; yc =-1;
 				break;
-				case 5:    //enter
+				case 10:    //enter
 				xc = 0; yc =0;
 				$("#choose").text(xg+","+yg);
 				if(SttA || SttB){
@@ -99,19 +99,19 @@ SttA = SttB  = 0;
 		socket.on("Sent-key-to-Play", function(data){
 		var key = parseInt(data);
 			switch(key){
-				case 1:    //left
+				case 9:    //left
 				xcA = -1; ycA =0;
 				break;
-				case 2:    //up
+				case 6:    //up
 				xcA = 0; ycA =1;
 				break;
-				case 3:    //right
+				case 11:    //right
 				xcA = 1; ycA =0;
 				break;
-				case 4:    //down
+				case 14:    //down
 				xcA = 0; ycA =-1;
 				break;
-				case 5:    //enter
+				case 10:    //enter
 				xcA = 0; ycA =0;
 				socket.emit("Fire",xgA+""+ygA);
 				break;
