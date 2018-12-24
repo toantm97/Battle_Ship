@@ -10,5 +10,5 @@ Final Battle ship project
 - Chưa có rung.
 - Chưa play theo turn.
 - Chơi theo phong cách mù, ai bắn chúng hết trước thắng.
-
+- Chưa có nhiều user, hiện tại chỉ có 2 user: Device01, Device02
 Code v1.0
